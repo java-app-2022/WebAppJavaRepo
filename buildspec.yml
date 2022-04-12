@@ -13,17 +13,16 @@ phases:
        - apt-get install docker-ce docker-ce-cli containerd.io unzip -y
        - echo Nothing to do in the pre_build phase...
        - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-       - IMAGE_TAG=$(echo $COMMIT_HASH:=latest)
     build:
       commands:
        - echo Build started on `date`
        - mvn clean install
        - docker login  -u brijinkumar -p FC9GDBgYi3FFx7W
        - codebuild-breakpoint
-       - docker build -t maven-tomcat:$IMAGE_TAG .
+       - docker build -t maven-tomcat:$COMMIT_HASH .
        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 463146931926.dkr.ecr.us-east-1.amazonaws.com
-       - docker tag maven-tomcat:$IMAGE_TAG 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$IMAGE_TAG
-       - docker push 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$IMAGE_TAG
+       - docker tag maven-tomcat:$COMMIT_HASH 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH
+       - docker push 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH
     post_build:
       commands:
        - echo Build completed on `date`
