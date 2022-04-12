@@ -23,4 +23,11 @@ phases:
     post_build:
       commands:
        - echo Build completed on `date`
+artifacts:
+ files:
+   - taskdef.json
+   - appspec.yaml
+
+ discard-paths: yes      
+    
        
