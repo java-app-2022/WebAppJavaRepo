@@ -27,6 +27,7 @@ phases:
       commands:
        - echo Build completed on `date`
        - printf '{"ImageURI":"463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH"}' > imageDetail.json
+       - codebuild-breakpoint
 artifacts:
  files:
    - taskdef.json
