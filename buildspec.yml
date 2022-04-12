@@ -17,6 +17,7 @@ phases:
        - echo Build started on `date`
        - mvn clean install
        - docker login  -u brijinkumar -p FC9GDBgYi3FFx7W
+       - codebuild-breakpoint
        - docker build -t maven-tomcat:1 .
        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 463146931926.dkr.ecr.us-east-1.amazonaws.com
        - docker tag maven-tomcat:1 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:1
