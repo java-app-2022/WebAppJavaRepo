@@ -12,6 +12,7 @@ phases:
        - apt-get update
        - apt-get install docker-ce docker-ce-cli containerd.io unzip -y
        - echo Nothing to do in the pre_build phase...
+       - chmod a+x image.sh
        - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
     build:
       commands:
@@ -26,7 +27,7 @@ phases:
     post_build:
       commands:
        - echo Build completed on `date`
-       - echo "{\"ImageURI\": \"463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH\"}" > imageDetail.json
+       - sh image.sh
        - codebuild-breakpoint
 artifacts:
  files:
