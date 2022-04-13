@@ -18,7 +18,7 @@ phases:
       commands:
        - echo Build started on `date`
        - mvn clean install
-       - docker login  -u brijinkumar -p ${{ secrets.PASSWORD }}
+       - docker login  -u $USER_NAME -p $PASSWORD
        - docker build -t maven-tomcat:$COMMIT_HASH .
        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 463146931926.dkr.ecr.us-east-1.amazonaws.com
        - docker tag maven-tomcat:$COMMIT_HASH 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH
