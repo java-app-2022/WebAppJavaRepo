@@ -135,5 +135,13 @@
 </plugins>
 	</build>
 	
+	<distributionManagement>
+  <repository>
+    <id>webartifactapr8-WebArtifactREpo</id>
+    <name>webartifactapr8-WebArtifactREpo</name>
+    <url>https://webartifactapr8-463146931926.d.codeartifact.us-east-1.amazonaws.com/maven/WebArtifactREpo/</url>
+  </repository>
+</distributionManagement>
+	
 	
 </project>
