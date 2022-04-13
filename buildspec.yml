@@ -14,10 +14,12 @@ phases:
        - echo Nothing to do in the pre_build phase...
        - chmod a+x image.sh
        - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain webartifactapr8 --domain-owner 463146931926 --query authorizationToken --output text`
+       - cp setting.xml /root/.m2/
     build:
       commands:
        - echo Build started on `date`
-       - mvn clean install
+       - mvn clean deploy
        - docker login  -u $USER_NAME -p $PASSWORD
        - docker build -t maven-tomcat:$COMMIT_HASH .
        - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 463146931926.dkr.ecr.us-east-1.amazonaws.com
