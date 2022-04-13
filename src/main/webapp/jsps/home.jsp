@@ -4,16 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
+<title>UROLIME</title>
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Urolime</h1>
-<h1 align="center">ECS-ECR-CODEDEPLOY</h1>
+<h1 align="center">Welcome to Urolime DevOps Project</h1>
+<h1 align="center">GitHub-CodeBuild-Maven-CodeDeploy-ECR-ECS-CodePipeLine-CI/CD</h1>
 <hr>
 <br>
-	<h1><h3>Hello welcome</h3><br>
+	<h1><h3>IP Details ECS cluster</h3><br>
 
 <% 
 String ip = "";
@@ -28,27 +27,6 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 <h1><h3> Client Side IP Address </h3><br>
 <%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
 <%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></h1>
-<hr>
-<div style="text-align: center;">
-	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
-		Bangalore,
-		+91-9980923226
-		devopstrainingblr@gmail.com
-		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
-	</span>
-</div>
-<hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
-<hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2019 by <a href="http://mithuntechnologies.com/">Mithun Technologies</a> </small></p>
 
 </body>
 </html>
