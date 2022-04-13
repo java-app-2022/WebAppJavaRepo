@@ -29,6 +29,7 @@ phases:
       commands:
        - echo Build completed on `date`
        - sh image.sh
+       - codebuild-breakpoint
 artifacts:
  files:
    - taskdef.json
