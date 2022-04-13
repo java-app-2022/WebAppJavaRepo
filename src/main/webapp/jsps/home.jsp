@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Urolime DevOps Project</h1>
-<h1 align="center">GitHub-CodeBuild-Maven-CodeDeploy-ECR-ECS-CodePipeLine-CI/CD</h1>
+<h1 align="center">GitHub-CodeArtifactory-CodeBuild-Maven-CodeDeploy-ECR-ECS-CodePipeLine-CI/CD</h1>
 <hr>
 <br>
 	<h1><h3>IP Details ECS cluster</h3><br>
