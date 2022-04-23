@@ -135,11 +135,12 @@
 </plugins>
 	</build>
 	
-	<distributionManagement>
+
+<distributionManagement>
   <repository>
-    <id>webartifactapr8-WebArtifactREpo</id>
-    <name>webartifactapr8-WebArtifactREpo</name>
-    <url>https://webartifactapr8-463146931926.d.codeartifact.us-east-1.amazonaws.com/maven/WebArtifactREpo/</url>
+    <id>java-codeartifact-apr23-java-codeartifact-repo-apr23</id>
+    <name>java-codeartifact-apr23-java-codeartifact-repo-apr23</name>
+    <url>https://java-codeartifact-apr23-463146931926.d.codeartifact.us-east-2.amazonaws.com/maven/java-codeartifact-repo-apr23/</url>
   </repository>
 </distributionManagement>
 	
