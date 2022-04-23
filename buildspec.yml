@@ -14,7 +14,7 @@ phases:
        - echo Nothing to do in the pre_build phase...
        - chmod a+x image.sh
        - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-       - export CODEARTIFACT_AUTH_TOKEN=`export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain java-codeartifact-apr23 --domain-owner 463146931926 --query authorizationToken --output text``
+       - export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain java-codeartifact-apr23 --domain-owner 463146931926 --query authorizationToken --output text`
        - cp settings.xml /root/.m2/
     build:
       commands:
