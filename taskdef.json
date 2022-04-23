@@ -1,5 +1,5 @@
 {
-    "executionRoleArn": "arn:aws:iam::463146931926:role/ecsTaskExecutionRole",
+    "executionRoleArn": "arn:aws:iam::463146931926:role/demo-service_ecsTaskExecutionRole",
     "containerDefinitions": [
         {
             "name": "demo-service",
