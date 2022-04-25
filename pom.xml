@@ -136,13 +136,7 @@
 	</build>
 	
 
-<distributionManagement>
-  <repository>
-    <id>java-codeartifact-apr23-java-codeartifact-repo-apr23</id>
-    <name>java-codeartifact-apr23-java-codeartifact-repo-apr23</name>
-    <url>https://java-codeartifact-apr23-463146931926.d.codeartifact.us-east-2.amazonaws.com/maven/java-codeartifact-repo-apr23/</url>
-  </repository>
-</distributionManagement>
+
 	
 	
 </project>
