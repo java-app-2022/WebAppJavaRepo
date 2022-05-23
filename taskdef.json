@@ -2,14 +2,14 @@
     "executionRoleArn": "arn:aws:iam::796638590183:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
-            "name": "kanban-ui",
+            "name": "demo-service",
             "image": "<IMAGE1_NAME>",
             "essential": true,
             "portMappings": [
                 {
-                    "hostPort": 8000,
+                    "hostPort": 8080,
                     "protocol": "tcp",
-                    "containerPort": 8000
+                    "containerPort": 8080
                 }
             ]
         }
@@ -20,6 +20,6 @@
     "networkMode": "awsvpc",
     "cpu": "256",
     "memory": "512",
-    "family": "ECS-KanbanUIService-BJJwXYQc24wI"
+    "family": "demo-servvice"
 }
 
